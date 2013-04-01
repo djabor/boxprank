@@ -1,0 +1,151 @@
+@green: #4aa82e;
+
+body {
+  padding: 0px;
+  margin: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: white;
+  width: 100%;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.wrapper {
+	width: 100%;
+	margin: 0 auto;
+}
+
+#header {
+	position: fixed;
+	top: 0;
+	min-height: 171px;
+	width: 100%;
+	z-index: 2;
+	background: white;
+	outline: black solid 1px;
+	background: transparent url(../images/nav_bg.png) repeat-x;
+	&.ui-scrollfix {
+	}
+	#nav {
+		max-width: 940px;
+		min-width: 450px;
+		min-height: 171px;
+		margin: 0 auto;
+		background: transparent url(../images/nav_logo.png) no-repeat top right;
+		padding: 0;
+		#title {
+			display: block;
+			font-size: 25px;
+			color: white;
+			position: relative;
+			top: 100px;
+			font-weight: bold;
+			text-align: center;
+		}
+		ul {
+			position: relative;
+			top: 105px;
+			max-width: 650px;
+			min-width: 450px;
+			padding: 0;
+			margin: 0 auto;
+			li {
+				list-style-type: none;
+				float: right;
+			}
+		}
+	}
+}
+
+input[type="radio"] {
+	display: none;
+	+label{
+		.icon {
+			display: inline-block;
+			background:url('http://refundfx.com.au/uploads/image/checkbox_empty.png') no-repeat center center;
+			width: 30px;
+			height: 30px;
+			vertical-align: middle;
+		}
+		padding:0 20px 0 0;
+		display: inline-block;
+		appearance:none;
+		-moz-appearance:none;
+		-webkit-appearance:none;
+		-ms-appearance: none;
+		-o-appearance: none;
+	}
+	&:checked {
+		+label {
+			.icon {
+				background:url('http://refundfx.com.au/uploads/image/checkbox_full.png') no-repeat center center;
+				width: 30px;
+				height: 30px;
+				vertical-align: middle;
+			}
+		}
+	}
+}
+
+#footer {
+	position: fixed;
+	height: 48px;
+	bottom: 0px;
+	width: 100%;
+	background: url(../images/footer_bg.png) repeat-x;
+	.footer {
+		max-width: 940px;
+		margin: 0 auto;
+		.links {
+			min-height: 48px;
+			ul {
+				background: transparent url(../images/brand.png) no-repeat left center;
+				clear: both;
+				margin: 10px auto 0;
+				padding: 0;
+				display: block;
+				min-height: 48px;
+				max-width: 940px;
+				text-align: center;
+				direction: rtl;
+				line-height: 48px;
+				li {
+					display: inline-block;
+					margin: 0 0 0 10px;
+					height: 19px;
+					padding: 3px 20px 3px 0;
+					line-height: 19px;
+					direction: rtl;
+					background: transparent url(../images/footer_bullet.png) no-repeat center right;
+					&:last-child {
+						a {
+							border: none;
+						}
+					}
+					a {
+						color: black;
+						text-decoration: none;
+						display: block;
+						height: 19px;
+						line-height: 19px;
+						border-left: black solid 1px;
+						padding: 0 0 0 10px;
+						cursor: pointer;
+						&:hover {
+							color: #ccc;
+						}
+						&:visited {
+							color: black;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.clr {
+	clear: both;
+}

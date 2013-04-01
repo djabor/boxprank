@@ -1,0 +1,34 @@
+extends layout
+
+block content
+	#header(ui-scrollfix="+20")
+		#nav
+			span#title The New ŠKODA Rapid
+			ul
+				li(ng-repeat="(key,val) in settings.categories")
+					input(type="radio", name="category", ng-model="filters.category", value="{{key}}", id="nav_1")
+					label(for="nav_1") Business
+						.icon
+					input(type="radio", name="category", ng-model="filters.category", value="{{key}}", id="nav_2")
+					label(for="nav_2") Pleasure
+						.icon
+				.clr
+	.wrapper
+		iframe(src="http://mountaindew.com/", width="100%", height="1024")
+	#footer
+		.footer
+			.links
+				ul
+					li
+						a(href="") לאתר הבית
+					li
+						a(href="http://www.google.com") placeholder
+					li
+						a(href="") צור קשר
+					li
+						a(href="") אולמות תצוגה
+					li
+						a(href="") נתוני זיהום
+					li
+						a(href="") מדיניות ופרטיות
+			.clr
